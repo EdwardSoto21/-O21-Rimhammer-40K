@@ -18,58 +18,72 @@ namespace Rimhammer40k.Necrons
             }
         }
 
-        //Function to get random number
-        private static readonly System.Random getrandom = new System.Random();
+        public bool IsResurrectable;
 
-        private bool IsResurrectable;
+        public int resurrectTime = -1;
 
-        private int resurrectAfterTimestamp = -1;
+        public int ticksToResurrection = 60000;
 
-        /**
-         * Get a random number out of 100
-         * If Necron is a colonist, resurrect with a 75% chance.
-         * If Necron is not a colonist, resurrect with a 25% chance.
-         * Otherwise, leave dead.
-         **/
         public void AttemptResurrection()
         {
+            Corpse corpse = this.parent as Corpse;
             System.Random rnd = new System.Random();
             int flag = rnd.Next(1, 100);
-            if (flag < 75)
+            if (corpse.InnerPawn.IsColonist)
             {
-                ResurrectNecron();
+                if (flag < 75)
+                {
+                    this.IsResurrectable = true;
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
-                return;
+                if (flag < 25)
+                {
+                    this.IsResurrectable = true;
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 
-        //Start Resurrection Loop
-        public void ResurrectNecron()
-        {
-            IsResurrectable = true;
-        }
-
-        public void TickRare()
+        public bool ShouldResurrect()
         {
             Corpse corpse = this.parent as Corpse;
-            if (this.IsResurrectable == true)
+            if (resurrectTime > 0 && Current.Game.tickManager.TicksGame >= this.resurrectTime)
             {
-                this.resurrectAfterTimestamp = corpse.Age + 2000;
+                return true;
             }
-            if (this.ShouldResurrect)
+            return false;
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            if (!respawningAfterLoad)
             {
-                ResurrectionUtility.Resurrect(corpse.InnerPawn);
+                Corpse corpse = this.parent as Corpse;
+                AttemptResurrection();
             }
         }
 
-        private bool ShouldResurrect
+        public override void CompTickRare()
         {
-            get
+            base.CompTickRare();
+            Corpse corpse = this.parent as Corpse;
+            if (this.IsResurrectable == true && resurrectTime < 0)
             {
-                Corpse corpse = this.parent as Corpse;
-                return this.resurrectAfterTimestamp > 0 && corpse.Age >= this.resurrectAfterTimestamp;
+                resurrectTime = Current.Game.tickManager.TicksGame + ticksToResurrection;
+            }
+            if (this.ShouldResurrect())
+            {
+                ResurrectionUtility.Resurrect(corpse.InnerPawn);
             }
         }
     }
