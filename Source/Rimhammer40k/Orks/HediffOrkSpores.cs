@@ -31,7 +31,6 @@ namespace Rimhammer40k.Orks
             if (Current.Game.tickManager.TicksGame >= this.ticksUntilNextSpore)
             {
                 this.TryDropSpore();
-                this.SetNextSporeTick();
             }
         }
 
@@ -42,7 +41,10 @@ namespace Rimhammer40k.Orks
 
         public void TryDropSpore()
         {
-            GenSpawn.Spawn(ThingDef.Named("O21_OrkoidSpore"), pawn.Position, pawn.Map, 0);
+            if(pawn.Map != null)
+            {
+                GenSpawn.Spawn(ThingDef.Named("O21_OrkoidSpore"), pawn.Position, pawn.Map, 0);
+            }
             this.SetNextSporeTick();
         }
     }
