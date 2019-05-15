@@ -211,6 +211,9 @@
 					<li>KnowColonistDied</li>
 					<li>ProsthophileNoProsthetic</li>
 				</cannotReceiveThoughts>
+				<canStillReceiveThoughts>
+					<li>SoullessNecron</li>
+				</canStillReceiveThoughts>
 			</thoughtSettings>
 			<raceRestriction>
 				<apparelList>
