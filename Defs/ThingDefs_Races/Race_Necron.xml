@@ -188,6 +188,9 @@
 					<li>KnowColonistDied</li>
 					<li>PawnWithGoodOpinionDied</li>
 				</cannotReceiveThoughts>
+				<canStillReceiveThoughts>
+					<li>SoullessNecron</li>
+				</canStillReceiveThoughts>
 			</thoughtSettings>
 			<raceRestriction>
 				<apparelList>
