@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Necrodermis</defName>
+		<label>necrodermis</label>
+		<description>Material made by Necrons from raw gauss energy, used to craft almost everything made by them, including their own bodies.</description>
+		<graphicData>
+			<texPath>Things/Resource/Necrodermis</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<WorkToMake>2000</WorkToMake>
+			<Mass>0.1</Mass>
+			<MarketValue>10</MarketValue>
+			<StuffPower_Armor_Sharp>1.98</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.99</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.80</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(30, 30, 30)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>6.2</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0</Flammability>
+				<WorkToMake>6.6</WorkToMake>
+				<WorkToBuild>6.6</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>1.0</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+		<deepCommonality>0.05</deepCommonality>
+		<deepCountPerPortion>7</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>2</min>
+			<max>10</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>GaussCrystal</defName>
+		<label>gauss crystal</label>
+		<description>Energy filled crystals that seem to grow naturally, heavily used by Necrons in production of their equipment, buildings and even creating their energy sources.</description>
+		<graphicData>
+			<texPath>Things/Resource/GaussCrystal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.1</Mass>
+			<MarketValue>18</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.05</deepCommonality>
+		<deepCountPerPortion>7</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>2</min>
+			<max>10</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>InactiveScarab</defName>
+		<label>inactive scarab</label>
+		<description>Canoptek scarab, installed in a Scarab Platform to activate it.</description>
+		<graphicData>
+			<texPath>Things/Necron/Constructs/Scarab/Stack/Necron_Scarab</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.1</Mass>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<deepCommonality>0.005</deepCommonality>
+		<deepCountPerPortion>1</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>1</min>
+			<max>2</max>
+		</deepLumpSizeRange>
+		<costList>
+			<Necrodermis>25</Necrodermis>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>N17_Nec_Research</researchPrerequisite>
+			<recipeUsers>
+				<li>NecronFabricationAltar</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+</Defs>

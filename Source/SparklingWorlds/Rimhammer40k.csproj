@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=1.0.9.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Humanoid Alien Races 2.0\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AbilityUser">
@@ -43,7 +43,7 @@
       <HintPath>..\..\..\JecsTools\Assemblies\AbilityUserAI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp, Version=1.0.6864.30166, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -59,58 +59,133 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Necrons\Buildings\Building_ScarabObelisk.cs" />
-    <None Include="Necrons\Buildings\ThingDef_Building_ScarabObelisk.cs" />
+    <Compile Include="Common\CompHelp.cs" />
+    <Compile Include="Constructs\AI\JobDriver_ReturnToStation.cs" />
+    <Compile Include="Constructs\AI\JobDriver_SelfTerminate.cs" />
+    <Compile Include="Constructs\AI\JobGiver_ConstructFlee.cs" />
+    <Compile Include="Constructs\AI\JobGiver_ConstructMain.cs" />
+    <Compile Include="Constructs\Building_ConstructStation.cs" />
+    <Compile Include="Constructs\Building_ConstructStationRefuelable.cs" />
+    <Compile Include="Constructs\Building_ConstructStationSpecialGraphics.cs" />
+    <Compile Include="Constructs\Building_WorkGiver_ConstructStation.cs" />
+    <Compile Include="Constructs\ConstructBackstories.cs" />
+    <Compile Include="Constructs\ConstructDefOf.cs" />
+    <Compile Include="Constructs\DefModExtension_ConstructStation.cs" />
+    <Compile Include="Constructs\Pawn_Construct.cs" />
+    <None Include="Spaceship\AirStrikeDef.cs" />
+    <None Include="Spaceship\Building_AirStrikeBeacon.cs" />
+    <None Include="Spaceship\Building_LandingPad.cs" />
+    <None Include="Spaceship\Building_LandingPadBeacon.cs" />
+    <None Include="Spaceship\Building_OrbitalRelay.cs" />
+    <None Include="Spaceship\Building_Spaceship.cs" />
+    <None Include="Spaceship\Building_SpaceshipCargo.cs" />
+    <None Include="Spaceship\Building_SpaceshipDamaged.cs" />
+    <None Include="Spaceship\Building_SpaceshipDispatcher.cs" />
+    <None Include="Spaceship\Building_SpaceshipDispatcherDrop.cs" />
+    <None Include="Spaceship\Building_SpaceshipDispatcherPick.cs" />
+    <None Include="Spaceship\Building_SpaceshipMedical.cs" />
+    <None Include="Spaceship\Controller.cs" />
+    <None Include="Spaceship\Expedition.cs" />
+    <None Include="Spaceship\FlyingSpaceship.cs" />
+    <None Include="Spaceship\FlyingSpaceshipAirStrike.cs" />
+    <None Include="Spaceship\FlyingSpaceshipLanding.cs" />
+    <None Include="Spaceship\FlyingSpaceshipTakingOff.cs" />
+    <None Include="Spaceship\HealingPawn.cs" />
+    <None Include="Spaceship\IncidentWorker_DamagedSpaceship.cs" />
+    <None Include="Spaceship\IncidentWorker_DispatcherDrop.cs" />
+    <None Include="Spaceship\IncidentWorker_DispatcherPick.cs" />
+    <None Include="Spaceship\JobDriver_BoardMedicalSpaceship.cs" />
+    <None Include="Spaceship\JobDriver_BoardSpaceship.cs" />
+    <None Include="Spaceship\JobDriver_CarryDownedPawn.cs" />
+    <None Include="Spaceship\JobDriver_TradeWithCargoSpaceship.cs" />
+    <None Include="Spaceship\JobDriver_TransferToMedibay.cs" />
+    <None Include="Spaceship\JobDriver_UseOrbitalRelayConsole.cs" />
+    <None Include="Spaceship\JobGiver_BoardSpaceship.cs" />
+    <None Include="Spaceship\JobGiver_CarryDownedPawn.cs" />
+    <None Include="Spaceship\JobGiver_HealColonists.cs" />
+    <None Include="Spaceship\JobGiver_RunToCarrier.cs" />
+    <None Include="Spaceship\LordJob_BoardSpaceship.cs" />
+    <None Include="Spaceship\LordJob_ExitMap.cs" />
+    <None Include="Spaceship\LordJob_HealColonists.cs" />
+    <None Include="Spaceship\LordJob_MiningCoBase.cs" />
+    <None Include="Spaceship\LordToilData_BoardSpaceship.cs" />
+    <None Include="Spaceship\LordToilData_EscortDownedPawn.cs" />
+    <None Include="Spaceship\LordToilData_HealColonists.cs" />
+    <None Include="Spaceship\LordToil_BoardSpaceship.cs" />
+    <None Include="Spaceship\LordToil_EscortDownedPawn.cs" />
+    <None Include="Spaceship\LordToil_HealColonists.cs" />
+    <None Include="Spaceship\MiningCoPawnGenerator.cs" />
+    <None Include="Spaceship\PlaceWorker_NotUnderBuilding.cs" />
+    <None Include="Spaceship\PlaceWorker_OnlyOneBuilding.cs" />
+    <None Include="Spaceship\PlaceWorker_TotallyNotUnderRoof.cs" />
+    <None Include="Spaceship\Settings.cs" />
+    <None Include="Spaceship\SpaceshipKind.cs" />
+    <None Include="Spaceship\TransitionAction_CancelDispatcherPick.cs" />
+    <None Include="Spaceship\TransitionAction_CheckExitSpotIsValid.cs" />
+    <None Include="Spaceship\Trigger_HostileToColony.cs" />
+    <None Include="Spaceship\Trigger_MedicalSpaceshipTakeOffImminent.cs" />
+    <None Include="Spaceship\Trigger_PawnCannotReachTargetDestination.cs" />
+    <None Include="Spaceship\Trigger_ReachableDownedPawn.cs" />
+    <None Include="Spaceship\Trigger_SpaceshipNotFound.cs" />
+    <None Include="Spaceship\Util_DownedPawn.cs" />
+    <None Include="Spaceship\Util_DutyDefOf.cs" />
+    <None Include="Spaceship\Util_Faction.cs" />
+    <None Include="Spaceship\Util_JobDefOf.cs" />
+    <None Include="Spaceship\Util_LandingPad.cs" />
+    <None Include="Spaceship\Util_Misc.cs" />
+    <None Include="Spaceship\Util_OrbitalRelay.cs" />
+    <None Include="Spaceship\Util_PawnKindDefOf.cs" />
+    <None Include="Spaceship\Util_Spaceship.cs" />
+    <None Include="Spaceship\Util_ThingDefOf.cs" />
+    <None Include="Spaceship\Util_TraderKindDefOf.cs" />
+    <None Include="Spaceship\WeaponDef.cs" />
+    <None Include="Spaceship\WorkGiver_TransferToMedibay.cs" />
+    <None Include="Spaceship\WorldComponent_OrbitalHealing.cs" />
+    <None Include="Spaceship\WorldComponent_Partnership.cs" />
+    <Compile Include="Necrons\HediffGiver_NecronRepair.cs" />
+    <Compile Include="Orks\Extensions\PawnExt.cs" />
+    <Compile Include="Orks\HediffGiver_OrkHealing.cs" />
+    <Compile Include="Projector\Alert_ProjectorTowerRoofed.cs" />
+    <Compile Include="Projector\Building_FixedProjector.cs" />
+    <Compile Include="Projector\Building_MobileProjector.cs" />
+    <Compile Include="Projector\Building_MobileProjectorTower.cs" />
+    <Compile Include="Projector\Building_MobileProjectorTurret.cs" />
+    <Compile Include="Projector\PlaceWorker_DrawLightedCells.cs" />
+    <Compile Include="Projector\PlaceWorker_DrawProjector.cs" />
+    <Compile Include="Projector\Util_Projector.cs" />
+    <Compile Include="ThoughtWorker_ConstructAlways.cs" />
     <None Include="MainButtonWorker_ToggleRimhammer40kTab.cs" />
     <None Include="MainTabWindow_Rimhammer40k.cs" />
+    <Compile Include="Necrons\BodyPartTagDefOf.cs" />
+    <Compile Include="Necrons\CompProperties_NecronResurrection.cs" />
+    <Compile Include="Necrons\CompProperties_SpawnNecron.cs" />
+    <Compile Include="Necrons\CompSpawnNecron.cs" />
+    <Compile Include="Necrons\HediffGiver_BirthdayNecron.cs" />
+    <Compile Include="Necrons\CompNecronResurrection.cs" />
+    <Compile Include="Necrons\NecronTweaker.cs" />
+    <Compile Include="Necrons\PawnCapacityWorker_CoolantPumping.cs" />
+    <Compile Include="Necrons\NecronCapacities.cs" />
+    <Compile Include="Necrons\Patches\HarmonyPatches.cs" />
     <Compile Include="Necrons\HediffNecronGrowingPart.cs" />
     <None Include="Rimhammer40kMenuItemDef.cs" />
+    <Compile Include="Necrons\NecronPawnProperties.cs" />
+    <Compile Include="Necrons\PawnCapacityWorker_GaussEfficiency.cs" />
+    <Compile Include="Necrons\PawnCapacityWorker_HeatVenting.cs" />
+    <Compile Include="Necrons\PawnKindDef.cs" />
+    <Compile Include="Settings\Rimhammer40kModSettings.cs" />
     <Compile Include="Tau\TauDroneDef.cs" />
     <None Include="MissionBoard.cs" />
     <None Include="Building_GraphicSwitchableDef.cs" />
-    <None Include="AIRobot\MinifiedThing_AIRobot.cs" />
-    <None Include="AIRobot\MoteThrowHelper.cs" />
-    <None Include="AIRobot\X2_AIRobot.cs" />
-    <None Include="AIRobot\X2_AIRobot_disabled.cs" />
-    <None Include="AIRobot\X2_AIRobot_Helper.cs" />
-    <None Include="AIRobot\X2_AIRobot_Pawn_WorkSettings.cs" />
-    <None Include="AIRobot\X2_Building_AIRobotCreator.cs" />
-    <None Include="AIRobot\X2_Building_AIRobotRechargeStation.cs" />
-    <None Include="AIRobot\X2_Dialog_ChangeNameTriple_Robots.cs" />
-    <None Include="AIRobot\X2_JobDriver_GoDespawning.cs" />
-    <None Include="AIRobot\X2_JobDriver_GoRecharging.cs" />
-    <None Include="AIRobot\X2_JobDriver_GoToCellAndDeconstructDisabledRobot.cs" />
-    <None Include="AIRobot\X2_JobDriver_RepairDamagedRobot.cs" />
-    <None Include="AIRobot\X2_JobGiver_LeaveLord.cs" />
-    <None Include="AIRobot\X2_JobGiver_RechargeEnergy.cs" />
-    <None Include="AIRobot\X2_JobGiver_RechargeEnergyIdle.cs" />
-    <None Include="AIRobot\X2_JobGiver_RepairDamagedRobot.cs" />
-    <None Include="AIRobot\X2_JobGiver_Return2BaseDespawn.cs" />
-    <None Include="AIRobot\X2_JobGiver_Return2BaseRoom.cs" />
-    <None Include="AIRobot\X2_JobGiver_Work.cs" />
-    <None Include="AIRobot\X2_JobGiver_Work_old.cs" />
-    <None Include="AIRobot\X2_MainTabWindow_Robots.cs" />
-    <None Include="AIRobot\X2_PawnColumnWorker_Charge.cs" />
-    <None Include="AIRobot\X2_PawnColumnWorker_IsInRecharge.cs" />
-    <None Include="AIRobot\X2_PawnColumnWorker_Rename.cs" />
-    <None Include="AIRobot\X2_PawnColumnWorker_ShutDown.cs" />
-    <None Include="AIRobot\X2_PawnColumnWorker_ShutDownAll.cs" />
-    <None Include="AIRobot\X2_ThingDef_AIRobot.cs" />
-    <None Include="AIRobot\X2_ThingDef_AIRobot_Building_RechargeStation.cs" />
-    <None Include="AIRobot\X2_ThinkNode_Conditional_DoWork.cs" />
     <Compile Include="Bunker\Building_Bunker.cs" />
     <Compile Include="Bunker\JobDriver_EnterBunker.cs" />
     <Compile Include="Bunker\Verb_Bunker.cs" />
     <Compile Include="Logic\BodyPartUtility.cs" />
     <Compile Include="MechanicalPawn.cs" />
-    <None Include="Necrons\Buildings\Building_EnergyStoragePylon.cs" />
-    <None Include="Necrons\CSpyder\CanoptekSpyder.cs" />
-    <None Include="Necrons\CScarab\CanoptekScarabDef.cs" />
     <Compile Include="Necrons\HediffNecrodermisRepair.cs" />
     <None Include="Eldar\CompEldarPsyker.cs" />
     <None Include="Eldar\EldarCardUtility.cs" />
     <None Include="Eldar\ITab_Pawn_Eldar.cs" />
-    <None Include="Necrons\Extensions\PawnExt.cs" />
+    <Compile Include="Necrons\Extensions\PawnExt.cs" />
     <Compile Include="Necrons\NecronHediffDefOf.cs" />
     <Compile Include="Orks\HediffOrkGrowingPart.cs" />
     <Compile Include="Orks\HediffOrkHealing.cs" />
@@ -123,6 +198,5 @@
     <Compile Include="Rimhammer40kPatches.cs" />
     <Compile Include="SpaceMarineConversion.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,7 +50,7 @@
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 	</PawnKindDef>
 	
-	<PawnKindDef ParentName="BaseValhallanPawnKind">
+	<PawnKindDef ParentName="BaseTerranPawnKind">
 		<defName>Valhallan</defName>
 		<label>Valhallan</label>
 		<defaultFactionType>ValhallanPlayerColony</defaultFactionType>
@@ -90,7 +90,7 @@
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 	</PawnKindDef>
 	
-	<PawnKindDef ParentName="BaseKriegPawnKind">
+	<PawnKindDef ParentName="BaseTerranPawnKind">
 		<defName>Krieg</defName>
 		<label>Krieg</label>
 		<defaultFactionType>KriegPlayerColony</defaultFactionType>
@@ -120,6 +120,37 @@
 			<li>Simple</li>
 		</techHediffsTags>
 	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BaseTerranPawnKind">
+		<defName>SteelLegion</defName>
+		<label>Steel Legion</label>
+		<defaultFactionType>SteelLegionPlayerColony</defaultFactionType>
+		<backstoryCategories>
+			<li>SteelLegionBackstory</li>
+		</backstoryCategories>
+		<apparelTags Inherit="false">
+			<li>SteelLegionApparel</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelMoney>
+			<min>100</min>
+			<max>2000</max>
+		</apparelMoney>
+		<apparelRequired Inherit="False">
+			<li>SteelLegionUniform</li>
+			<li>SteelLegionHelmet</li>
+		</apparelRequired>
+		<backstoryCryptosleepCommonality>0.5</backstoryCryptosleepCommonality>
+		<techHediffsChance>0.03</techHediffsChance>
+		<techHediffsMoney>
+			<min>50</min>
+			<max>800</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+		</techHediffsTags>
+	</PawnKindDef>
 
 	<PawnKindDef Abstract="True" Name="BaseGuevesaPawnKind">
 		<race>Alien_Guevesa</race>
@@ -130,7 +161,7 @@
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 	</PawnKindDef>
 	
-	<PawnKindDef ParentName="BaseGuevesaPawnKind">
+	<PawnKindDef ParentName="BaseTerranPawnKind">
 		<defName>Guevesa</defName>
 		<label>Gue'vesa</label>
 		<defaultFactionType>TauPlayerColony</defaultFactionType>
