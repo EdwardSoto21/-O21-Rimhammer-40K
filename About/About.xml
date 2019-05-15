@@ -3,6 +3,8 @@
 	<name>[O21] Rimhammer 40K</name>
 	<author>Neronix17</author>
 	<url></url>
-	<targetVersion>1.0.2059</targetVersion>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
 	<description>Warhammer 40K introduced to the Rimworld universe.</description>
 </ModMetaData>
