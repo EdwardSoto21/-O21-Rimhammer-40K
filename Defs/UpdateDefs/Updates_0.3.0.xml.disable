@@ -92,7 +92,6 @@ Necrons:
 - [Added] Gauss Fields biomes (Green = temperate, blue = low temp, orange = high temp)
 - [Added] Blackstone natural resource (overrides any stone type in a Guass Fields biome, acts like any other stone)
 - [Added] Black Sand natural flooring for Gauss Fields biome
-- [Added] Map Generation: Necron Tomb Entrance
 - [Added] New Building: Necron Light and Heavy Turrets
 - [Added] New Building: Necron Tomb, awakens Necrons when built over a tomb entrance, uses necrodermis and appropriate colour gauss crystals to do so along with some energy.
 - [Added] New Building: Canoptek Cannery (Pariah Converter)

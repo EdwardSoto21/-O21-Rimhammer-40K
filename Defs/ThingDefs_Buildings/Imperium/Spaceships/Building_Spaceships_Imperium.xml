@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<O21ToolBox.Spaceship.SpaceshipDef>
+		<defName>O21_R40k_Ship_ArvusLighter</defName>
+		<label>arvus lighter</label>
+		<description>A voidship used by various Imperium factions to convey bulk resources, materials and personnel.</description>
+		<graphicPaths>
+			<landedTexPath>Things/Ships/Imperium/ArvusLighterImperium</landedTexPath>
+			<landingTexPath>Things/Ships/Imperium/ArvusLighterImperium</landingTexPath>
+			<flyingTexPath>Things/Ships/Imperium/ArvusLighterImperium</flyingTexPath>
+			<shadowTexPath>Things/Ships/Imperium/ArvusLighterImperiumShadow</shadowTexPath>
+			<drawSize>(5.5, 5.5)</drawSize>
+		</graphicPaths>
+		<size>(5,5)</size>
+		<engineType>Orbital</engineType>
+		<roles>
+			<li>Cargo</li>
+			<li>Reinforcement</li>
+			<li>Damaged</li>
+			<li>DispatcherDrop</li>
+			<li>DispatcherPick</li>
+		</roles>
+		<factions>
+			<li>IGCadian412</li>
+		</factions>
+		<crewSettings>
+			<pilotReq>true</pilotReq>
+			<pilotMax>1</pilotMax>
+			<passengerMax>12</passengerMax>
+		</crewSettings>
+		<crewGroupMaker>
+			<li>
+				<groupType>Damaged</groupType>
+				<!-- <factions>
+					<li>IGCadian412</li>
+				</factions> -->
+				<crewKindOptions>
+					<li>
+						<pawnKind>IGTrooper_Cadian</pawnKind>
+						<crewRole>Pilot</crewRole>
+					</li>
+					<li>
+						<pawnKind>IGTrooper_Cadian</pawnKind>
+						<crewRole>Gunner</crewRole>
+					</li>
+					<li>
+						<pawnKind>IGTrooper_Cadian</pawnKind>
+						<crewRole>Passenger</crewRole>
+					</li>
+				</crewKindOptions>
+			</li>
+		</crewGroupMaker>
+		<!-- <statBases>
+			<MarketValue>20000</MarketValue>
+			<Flammability>0.3</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.95</ArmorRating_Heat>
+		</statBases> -->
+	</O21ToolBox.Spaceship.SpaceshipDef>
+
+	<ThingDef Name="O21_R40k_Ship_ArvusLighter">
+		<defName>O21_R40k_Ship_ArvusLighter_Landing</defName>
+		<label>arvus lighter</label>
+		<description>A voidship used by various Imperium factions to convey bulk resources, materials and personnel.</description>
+		<thingClass>O21ToolBox.Spaceship.Spaceship_Landing</thingClass>
+
+		<graphicData>
+			<texPath>Things/Ships/Imperium/ArvusLighterImperium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5.5, 5.5)</drawSize>
+		</graphicData>
+		<size>(5,5)</size>
+
+		<useHitPoints>True</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<selectable>True</selectable>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<category>Ethereal</category>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="O21_R40k_Ship_ArvusLighter">
+		<defName>O21_R40k_Ship_ArvusLighter_Landed</defName>
+		<thingClass>O21ToolBox.Spaceship.Spaceship_Building</thingClass>
+	</ThingDef>
+
+	<ThingDef ParentName="O21_R40k_Ship_ArvusLighter">
+		<defName>O21_R40k_Ship_ArvusLighter_Airstrike</defName>
+		<thingClass>O21ToolBox.Spaceship.Spaceship_Airstrike</thingClass>
+	</ThingDef>
+
+	<ThingDef ParentName="O21_R40k_Ship_ArvusLighter">
+		<defName>O21_R40k_Ship_ArvusLighter_TakingOff</defName>
+		<thingClass>O21ToolBox.Spaceship.Spaceship_TakingOff</thingClass>
+	</ThingDef>
+
+</Defs>

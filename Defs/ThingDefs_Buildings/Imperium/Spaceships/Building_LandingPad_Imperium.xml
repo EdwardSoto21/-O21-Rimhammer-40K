@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="SpaceshipO21_BuildingBase">
+	<ThingDef ParentName="O21_BuildingBase">
 		<defName>LandingPad_Imperium</defName>
 		<label>landing pad (imperium)</label>
 		<description>Flat platform allowing voidships to land.</description>
@@ -36,10 +36,10 @@
 		</costList>
 		<designationCategory>Ship</designationCategory>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<placeWorkers>
+		<!-- <placeWorkers>
 			<li>O21Toolbox.Spaceship.PlaceWorker_TotallyNotUnderRoof</li>
 			<li>O21Toolbox.Spaceship.PlaceWorker_NotUnderBuilding</li>
-		</placeWorkers>
+		</placeWorkers> -->
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>

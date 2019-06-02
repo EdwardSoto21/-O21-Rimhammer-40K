@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="SpaceshipO21_BuildingBase">
+	<ThingDef ParentName="O21_BuildingBase">
 		<defName>OrbitalRelayImperium</defName>
 		<label>orbital relay (imperium)</label>
 		<description>This communication array is able to contact nearby factions, ships and comms satellites orbiting around the planet.</description>
@@ -45,10 +45,10 @@
 		</costList>
 		<designationCategory>Ship</designationCategory>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<placeWorkers>
+		<!--<placeWorkers>
 			<li>O21Toolbox.Spaceship.PlaceWorker_TotallyNotUnderRoof</li>
 			<li>O21Toolbox.Spaceship.PlaceWorker_OnlyOneBuilding</li>
-		</placeWorkers>
+		</placeWorkers> -->
 		<comps>
 			<!-- <li Class="O21Toolbox.Spaceship.CompProperties_OrbitalRelay">
 				<compClass>O21Toolbox.Spaceship.Comp_OrbitalRelay</compClass>
