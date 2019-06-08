@@ -170,6 +170,26 @@
 		<combatPower>85</combatPower>
 	</PawnKindDef>
 
+	<PawnKindDef ParentName="IGKriegBase"> <!-- IGGrenadier_Krieg -->
+		<defName>IGSniperAlt_Krieg</defName>
+		<label>Krieg Sniper</label>
+		<weaponMoney>
+			<min>2040</min>
+			<max>4000</max>
+		</weaponMoney>
+		<apparelRequired>
+			<li>KriegSniperUniform</li>
+			<li>KriegFieldCapGasmask</li>
+		</apparelRequired>
+		<apparelTags Inherit="False">
+			<li>KriegSniperApparel</li>
+		</apparelTags>
+		<weaponTags Inherit="False">
+			<li>KriegSniper</li>
+		</weaponTags>
+		<combatPower>85</combatPower>
+	</PawnKindDef>
+
 	<PawnKindDef ParentName="IGKriegBase"> <!-- IGTrader_Cadian -->
 		<defName>IGTrader_Krieg</defName>
 		<label>Krieg Provisioner</label>

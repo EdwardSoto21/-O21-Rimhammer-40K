@@ -21,7 +21,6 @@ namespace Rimhammer40k
 
         public override void EarlyInitalize()
         {
-            Logger.Message(":: Rimhammer40k Active ::");
         }
     }
 }

@@ -41,11 +41,11 @@ namespace Rimhammer40k
             Text.Anchor = 0;
             Text.Font = GameFont.Small;
             num += Settings.rowHeight * 2f;
-            Settings.DrawLabeledInput(ref num, canvas, "Max Ork Population", ref Rimhammer40kMod.maxOrkPopulation, "Maximum Orks that will spawn from spores. Default: 10");
-            Settings.DrawLabeledInput(ref num, canvas, "Max Grot Population", ref Rimhammer40kMod.maxGrotPopulation, "Maximum Grots that will spawn from spores. Default: 5");
+            Settings.DrawLabeledInput(ref num, canvas, "Max Ork Population", ref Rimhammer40kMod.maxOrkPopulation, "Maximum Orks that will spawn from spores. Set to 0 for unlimited. Default: 0");
+            Settings.DrawLabeledInput(ref num, canvas, "Max Grot Population", ref Rimhammer40kMod.maxGrotPopulation, "Maximum Grots that will spawn from spores. Set to 0 for unlimited. Default: 0");
             Text.Anchor = 0;
             Text.Font = GameFont.Small;
-            string text = "Maximum populations will only limit how many of each will spawn from spores, it does not affect Storyteller soft cap and does not take into account non Ork/Grot pawns!";
+            string text = "Maximum populations will only limit how many of each will spawn from spores, it does not affect Storyteller soft cap and does not take into account non Ork/Grot pawns! Setting to 0 will mean unlimited, they'll just keep spawning.";
             Text.Font = 0;
             float num2 = Text.CalcHeight(text, canvas.width);
             Widgets.Label(new Rect(0f, num, canvas.width, num2), text);
@@ -53,6 +53,11 @@ namespace Rimhammer40k
             num += num2;
             Settings._settingsHeight = num;
             Widgets.EndScrollView();
+
+            if (Widgets.ButtonText(new Rect(0f, canvas.height + 35f, 125f, 45f), "Reset Default"))
+            {
+                Rimhammer40kMod.ResetToDefault();
+            }
         }
 
         public override void ExposeData()

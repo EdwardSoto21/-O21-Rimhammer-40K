@@ -108,7 +108,7 @@ namespace Rimhammer40k.Spore
 
         public bool CanSpawnOrk()
         {
-            if (ColonistOrkCount > Rimhammer40kMod.maxOrkPopulation)
+            if (Rimhammer40kMod.maxOrkPopulation != 0 && ColonistOrkCount > Rimhammer40kMod.maxOrkPopulation)
             {
                 return false;
             }
@@ -125,7 +125,7 @@ namespace Rimhammer40k.Spore
 
         public bool CanSpawnGrot()
         {
-            if (ColonistGrotCount > Rimhammer40kMod.maxOrkPopulation)
+            if (Rimhammer40kMod.maxGrotPopulation != 0 && ColonistGrotCount > Rimhammer40kMod.maxOrkPopulation)
             {
                 Log.Message("Current Grot Count: " + this.Map.mapPawns.AllPawns.Count((Pawn x) => (x.IsColonist && x.def.defName == "Alien_Grot")).ToString(), false);
                 Log.Message("Max Grot Count: " + Rimhammer40kMod.maxGrotPopulation.ToString(), false);

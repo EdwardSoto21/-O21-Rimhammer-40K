@@ -399,30 +399,6 @@
 		</apparel>
 	</ThingDef>
 	
-	<ThingDef ParentName="OrkHeavyArmorBase">
-		<defName>OrkHeavyArmorYellow</defName>
-		<label>ork heavy armor (yellow)</label>
-		<description>Worn by snobby Boyz, also gud for improv'n 'plosions!</description>
-		<graphicData>
-			<texPath>Things/Ork/Armor/Yellow/OrkArmor_Heavy</texPath>
-		</graphicData>
-		<costList>
-			<Steel>80</Steel>
-		</costList>
-		<equippedStatOffsets Inherit="False">
-			<SellPriceFactor>1.3</SellPriceFactor>
-			<AnimalGatherYield>1.3</AnimalGatherYield>
-			<PlantHarvestYield>1.3</PlantHarvestYield>
-        </equippedStatOffsets>
-		<apparel>
-			<tags Inherit="False">
-				<li>OrkApparel</li>
-				<li>BadMoonsApparel</li>
-			</tags>
-			<wornGraphicPath>Things/Ork/Armor/Yellow/OrkArmor_Heavy</wornGraphicPath>
-		</apparel>
-	</ThingDef>
-	
 	<!-- ====== Helmets ====== -->
 
 	<ThingDef ParentName="ArmorHelmetMakeableBase" Name="OrkRedHelmetBase">

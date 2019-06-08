@@ -108,7 +108,7 @@
     <Compile Include="Rimhammer40k.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Building_RequisitionRelay.cs" />
-    <Compile Include="Rimhammer40kPatches.cs" />
+    <Compile Include="HarmonyPatches.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

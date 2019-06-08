@@ -156,6 +156,7 @@
 					<li>KnowGuestExecuted</li>
 					<li>KnowPrisonerDiedInnocent</li>
 					<li>AteRawFood</li>
+					<li>AteKibble</li>
 					<li>AteCorpse</li>
 					<li>AteHumanlikeMeatDirect</li>
 					<li>AteHumanlikeMeatAsIngredient</li>
@@ -167,6 +168,7 @@
 					<li>SleptOutside</li>
 					<li>KnowPrisonerSold</li>
 					<li>KnowGuestOrganHarvested</li>
+					<li>KnowColonistOrganHarvested</li>
 					<li>SoakingWet</li>
 					<li>KnowButcheredHumanlikeCorpse</li>
 					<li>ButcheredHumanlikeCorpse</li>
@@ -281,6 +283,7 @@
 			</li>
 		</tools>
 		<race>
+			<fleshType>Ork</fleshType>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 			<intelligence>Humanlike</intelligence>

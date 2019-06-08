@@ -21,6 +21,14 @@ namespace Rimhammer40k
         public Rimhammer40kMod(ModContentPack content) : base(content)
         {
             base.GetSettings<Settings>();
+
+            if (firstTimeRun)
+            {
+                firstTimeRun = false;
+                ResetToDefault();
+            }
+
+            Log.Message(":: Rimhammer 40k Running - Version 0.4.0 RC1 ::");
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
@@ -34,10 +42,19 @@ namespace Rimhammer40k
             return "Rimhammer 40k";
         }
 
+        public static bool firstTimeRun;
+
         public static int maxOrkPopulation;
 
         public static int maxGrotPopulation;
 
         public static bool necronsTeleportOnDeath;
+
+        public static void ResetToDefault()
+        {
+            necronsTeleportOnDeath = true;
+            maxOrkPopulation = 0;
+            maxGrotPopulation = 0;
+        }
     }
 }

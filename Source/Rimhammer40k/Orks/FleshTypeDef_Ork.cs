@@ -2,7 +2,7 @@
 using Verse;
 using RimWorld;
 
-namespace Rimhammer40k.Orks.Extensions
+namespace Rimhammer40k.Orks
 {
     [StaticConstructorOnStartup]
     static public class PawnExt

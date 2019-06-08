@@ -191,7 +191,7 @@
 				<li>ImperialGuardApparel</li>
 				<li>ValhallanApparel</li>
 			</tags>
-			<wornGraphicPath>Things/Imperial Guard/Valhallan/Hats/DeathKorpsSniperFieldcap_gasmask</wornGraphicPath>
+			<wornGraphicPath>Things/Imperial Guard/Krieg/Hats/DeathKorpsSniperFieldcap_gasmask</wornGraphicPath>
 		</apparel>
 	</ThingDef>
 	

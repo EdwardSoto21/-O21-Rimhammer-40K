@@ -82,6 +82,13 @@
 		<apparelTags>
 			<li>CommissarApparel</li>
 		</apparelTags>
+		<weaponMoney>
+			<min>2040</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>CommissarEquipment</li>
+		</weaponTags>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="IGBase"> <!-- IGOfficer_Cadian -->
